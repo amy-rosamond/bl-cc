@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap");
+
+
+* {
+    box-sizing: border-box;
+    font-family: "BIZ UDPMincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text);
+    letter-spacing: .5px;
+    transition: all .3s ease-in-out;
+}
+
+html,
+body {
+    background-color: var(--background);
+    margin: 0;
+}
+
+p {
+    line-height: 24px;
+    font-size: 16px;
+}
+
+strong {
+    font-weight: 900;
+}
+
+a {
+    color: var(--baseit-blue);
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    &:hover {
+        text-decoration: none;
+        color: var(--baseit-blue);
+    }
+}

@@ -1,0 +1,25 @@
+@use "../css/general/tags";
+@use "../css/general/text";
+
+@use "../css/layout/container";
+@use "../css/layout/header";
+@use "../css/layout/footer";
+
+@use "../css/layout/pages/contact";
+@use "../css/layout/pages/projects";
+
+:root {
+    //hex: #3897C8
+    --baseit-blue: rgb(56, 151, 200);
+    --background: #fff;
+    --text: #000;
+    --mode: #000;
+    --grey: rgb(229, 232, 236);
+    --black-yellow: #000;
+    --blue-yellow: rgb(56, 151, 200);
+
+    --yellow: rgb(251, 251, 114);
+    --light-yellow: rgb(244, 244, 158);
+    --darkest-blue: rgb(11, 31, 69);
+    --fontfamily-BIZ: 'BIZ UDPMincho', serif;
+}
