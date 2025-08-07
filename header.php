@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title><?= Baseit::NAME->value; ?></title>
-    <link rel="icon" href="img/logos/baseit-b.png">
+    <link rel="icon" href="img/logos/bl-logo-round.png">
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
@@ -19,7 +19,7 @@
 </head>
 
 <header>
-    <div><img src="img/logos/baseit-b.png" alt="<?= Baseit::NAME->value; ?>"></div>
+    <div><img src="img/logos/bl-logo-round.png" alt="<?= Baseit::NAME->value; ?>"></div>
 
     <?php
 

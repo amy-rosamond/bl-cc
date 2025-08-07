@@ -34,20 +34,20 @@
         <?php
 
         foreach ($navBarFooterHours as $c) {
-            echo '<a >' . $c['monday'] . '</a>';
-            echo '<a >' . $c['tuesday'] . '</a>';
-            echo '<a >' . $c['wednesday'] . '</a>';
-            echo '<a >' . $c['thursday'] . '</a>';
-            echo '<a >' . $c['friday'] . '</a>';
-            echo '<a >' . $c['saturday'] . '</a>';
-            echo '<a >' . $c['sunday'] . '</a>';
+            echo '<p>' . $c['monday'] . '</p>';
+            echo '<p>' . $c['tuesday'] . '</p>';
+            echo '<p>' . $c['wednesday'] . '</p>';
+            echo '<p>' . $c['thursday'] . '</p>';
+            echo '<p>' . $c['friday'] . '</p>';
+            echo '<p>' . $c['saturday'] . '</p>';
+            echo '<p>' . $c['sunday'] . '</p>';
         }
 
         ?>
     </nav>
 
 
-    <div><img src="img/logos/baseit-logo.png" alt="<?= Baseit::NAME->value; ?>"></div>
+    <div><img src="img/logos/bl-logo-round.png" alt="<?= Baseit::NAME->value; ?>"></div>
 
 </footer>
 

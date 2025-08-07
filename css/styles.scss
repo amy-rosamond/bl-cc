@@ -9,10 +9,13 @@
 @use "../css/layout/pages/projects";
 
 :root {
-    //hex: #3897C8
-    --baseit-blue: rgb(56, 151, 200);
-    --background: #fff;
-    --text: #000;
+    --background: rgb(57, 58, 60);
+    --background-img: url(../img/bg/wood-bg.jpg);
+    --primary: rgb(57, 58, 60);
+    --secondary: rgb(244, 67, 54);
+    --white: #fff;
+    
+    --text: #fff;
     --mode: #000;
     --grey: rgb(229, 232, 236);
     --black-yellow: #000;

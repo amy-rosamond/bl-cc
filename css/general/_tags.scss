@@ -14,6 +14,8 @@
 html,
 body {
     background-color: var(--background);
+    background-image: var(--background-img);
+    background-size: cover;
     margin: 0;
 }
 
@@ -27,13 +29,13 @@ strong {
 }
 
 a {
-    color: var(--baseit-blue);
+    color: var(--secondary);
     font-weight: 900;
     text-decoration: none;
     letter-spacing: 1px;
 
     &:hover {
         text-decoration: none;
-        color: var(--baseit-blue);
+        color: rgb(254 115 105);
     }
 }

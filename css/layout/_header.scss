@@ -2,6 +2,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     padding: 20px 20px;
+    background-color: var(--primary);
 
     img {
         max-width: 100px;
@@ -24,7 +25,7 @@ header {
             height: 50px;
             margin: 3px 10px;
             border-radius: 3px;
-            background-image: linear-gradient(var(--baseit-blue), var(--baseit-blue));
+            background-image: linear-gradient(var(--secondary), var(--secondary));
             background-position: 50% 100%;
             background-repeat: no-repeat;
             background-size: 100% 3%;
@@ -32,19 +33,21 @@ header {
             align-items: center;
             justify-content: center;
             color: var(--text);
-    
-            i {
-                color: var(--blue-yellow);
-                font-size: 30px;
+
+            svg {
+                stroke: var(--secondary);
+                width: 35px;
                 margin-right: 5px;
             }
     
             &:hover {
-                color: #fff;
+                color: var(--white);
                 background-size: 100% 100%;
-    
-                i {
-                    color: var(--yellow);
+
+                svg {
+                    stroke: var(--white);
+                    width: 35px;
+                    margin-right: 5px;
                 }
             }
         }
@@ -71,7 +74,7 @@ header {
         align-items: center;
 
         i {
-            color: var(--baseit-blue);
+            color: var(--secondary);
             font-size: 1.5rem;
         }
     }
@@ -110,7 +113,7 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--baseit-blue);
+        background-color: var(--secondary);
         -webkit-transition: .4s;
         transition: .4s;
         border-radius: 34px;
@@ -122,7 +125,7 @@ header {
             width: 15px;
             left: 4px;
             bottom: 2.8px;
-            background-color: #fff;
+            background-color: var(--white);
             -webkit-transition: .4s;
             transition: .4s;
             border-radius: 50%;

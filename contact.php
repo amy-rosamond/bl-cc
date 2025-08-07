@@ -17,21 +17,21 @@ $contactBox[1] = array(
 $contactBox[2] = array(
     "icon" => "<i class='bx bxl-instagram'></i>",
     "title" => "Instagram Us Here!",
-    "contact" => '@baseitelectrical',
+    "contact" => '@bl_carpentryandconstructionltd',
     "button" => '<button href="">Instagram</button>'
 );
 
 $contactBox[3] = array(
     "icon" => "<i class='bx bxl-facebook'></i>",
     "title" => "Facebook Us Here!",
-    "contact" => '@baseitelectrical',
+    "contact" => '@bl_carpentryandconstructionltd',
     "button" => '<button href="">Facebook</button>'
 );
 
 $contactBox[4] = array(
     "icon" => "<i class='bx bx-map-pin'></i>",
     "title" => "Locate Us Here!",
-    "contact" => 'North London',
+    "contact" => 'St Albans',
     "button" => '<button href="">Map</button>'
 );
 
