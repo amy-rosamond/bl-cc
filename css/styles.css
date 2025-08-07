@@ -12,8 +12,6 @@
 html,
 body {
   background-color: var(--background);
-  background-image: var(--background-img);
-  background-size: cover;
   margin: 0;
 }
 
@@ -185,11 +183,28 @@ footer nav p {
   display: flex;
   align-items: center;
   border-radius: 3px;
+  color: var(--white);
+}
+footer nav a strong,
+footer nav p strong {
+  letter-spacing: 1px;
+}
+footer nav a strong span,
+footer nav p strong span {
+  color: var(--secondary);
+  font-weight: 900;
+  font-size: 20px;
+}
+footer nav a svg,
+footer nav p svg {
+  stroke: var(--secondary);
+  width: 27px;
+  margin-right: 9px;
 }
 footer nav a i,
 footer nav p i {
-  color: var(--black-yellow);
-  font-size: 24px;
+  font-size: 30px;
+  color: var(--secondary);
   margin-right: 5px;
 }
 footer nav a:hover,
@@ -197,12 +212,28 @@ footer nav p:hover {
   color: #fff;
   background-size: 100% 100%;
 }
+footer nav a:hover svg,
+footer nav p:hover svg {
+  stroke: var(--white);
+}
 footer nav a:hover i,
 footer nav p:hover i {
-  color: var(--yellow);
+  color: var(--white);
 }
 footer nav p {
   justify-content: space-between;
+}
+footer div {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer div img {
+  max-width: 700px;
+  width: 100%;
+  opacity: 0.1;
 }
 
 .contact-box {
@@ -346,7 +377,7 @@ footer nav p {
   --background: rgb(57, 58, 60);
   --background-img: url(../img/bg/wood-bg.jpg);
   --primary: rgb(57, 58, 60);
-  --secondary: rgb(244, 67, 54);
+  --secondary: rgb(255, 147, 0);
   --white: #fff;
   --text: #fff;
   --mode: #000;

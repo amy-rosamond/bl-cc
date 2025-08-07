@@ -43,11 +43,28 @@ footer {
             display: flex;
             align-items: center;
             border-radius: 3px;
+            color: var(--white);
             // justify-content: center;
 
+            strong {
+                letter-spacing: 1px;
+                
+                span {
+                    color: var(--secondary);
+                    font-weight: 900;
+                    font-size: 20px;
+                }
+            }
+
+            svg {
+                stroke: var(--secondary);
+                width: 27px;
+                margin-right: 9px;
+            }
+
             i {
-                color: var(--black-yellow);
-                font-size: 24px;
+                font-size: 30px;
+                color: var(--secondary);
                 margin-right: 5px;
             }
 
@@ -55,14 +72,32 @@ footer {
                 color: #fff;
                 background-size: 100% 100%;
 
+                svg {
+                    stroke: var(--white);
+                }
+
                 i {
-                    color: var(--yellow);
+                    color: var(--white);
                 }
             }
         }
 
         p {
             justify-content: space-between;
+        }
+    }
+
+    div {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: 700px;
+            width: 100%;
+            opacity: 0.1;
         }
     }
 }
