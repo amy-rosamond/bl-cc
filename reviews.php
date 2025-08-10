@@ -1,6 +1,6 @@
 <?php
 
-include('variables.php');
+include('includes/variables.php');
 include('header.php');
 
 echo 'REVIEWS';

@@ -1,59 +1,60 @@
-.contact {
-    &-box {
-        &-container {
-            display: flex;
-        }
+@use "../../components/animation" as *;
 
-        max-width: 210px;
-        width: 100%;
+.contact-box {
+    &-container {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        background-color: var(--grey);
-        border-radius: 5px;
-        margin: 5px;
-        border: 2px solid var(--black-yellow);
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-        p {
-            text-align: center;
-            margin: 0;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 35px 20px;
+    position: relative;
+    bottom: 60px;
+    z-index: 2;
+
+    &-bottom {
+        background-color: var(--dark-grey);
+        bottom: 104px;
+        z-index: 1;
+    }
+
+    svg {
+        width: 50px;
+        stroke: var(--secondary);
+    }
+
+    p {
+        text-align: center;
+        margin: 0;
+    }
+
+    &-social {
+        display: flex;
+        justify-content: center;
+
+        a {
+            background-color: var(--secondary);
+            padding: 10px;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
-            width: 100%;
-            margin: 5px 0px;
-
-            &:first-child {
-                margin: 0px;
-            }
-
-            &:last-child {
-                margin-bottom: 0px;
-            }
+            align-items: center;
+            margin: 10px;
+            @include backgroundFromBottomBlack;
+            cursor: pointer;
 
             i {
-                color: var(--secondary);
-                font-size: 40px;
-            }
-
-            button {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                padding: 10px;
-                background-color: var(--secondary);
-                color: #fff;
-                border-radius: 3px;
-                border: 2px solid var(--mode);
-                font-weight: 400;
-                font-size: 16px;
-                letter-spacing: 1px;
-                cursor: pointer;
-
-                &:hover {
-                    border-radius: 50px;
-                }
+                font-size: 24px;
+                color: var(--black);
             }
         }
     }

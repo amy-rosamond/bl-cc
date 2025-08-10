@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title><?= Baseit::NAME->value; ?></title>
+    <title><?= Blcc::NAME->value; ?></title>
     <link rel="icon" href="img/logos/bl-logo-round.png">
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -18,37 +18,54 @@
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<header>
-    <div><img src="img/logos/bl-logo-round.png" alt="<?= Baseit::NAME->value; ?>"></div>
+<body onload="startTime();">
+    <header>
 
-    <?php
+        <?php
 
         include('includes/nav-array.php');
 
-    ?>
-
-    <nav>
-        <?php
-
-        foreach ($navBar as $a) {
-            echo '<a href="' . $a['href'] . '">' . $a['icon'] . '' . $a['name'] . '</a>';
-        }
-
         ?>
-    </nav>
 
-<div class="mode">
-    <div class="mode-sun">
-        <i class='bx bx-sun'></i>
-    </div>
-    <div>
-        <label>
-            <input onClick="switchVariables();" type="checkbox">
-            <span class="slider round"></span>
-        </label>
-    </div>
-    <div class="mode-moon">
-        <i class='bx bx-moon'></i>
-    </div>
+        <nav>
+            <?php
+
+            foreach (array_slice($navBar, 0, 3) as $a) {
+                echo '<a href="' . $a['href'] . '">' . $a['icon'] . '' . $a['name'] . '</a>';
+            }
+
+            ?>
+        </nav>
+
+        <div><img src="img/logos/bl-logo-round.png" alt="<?= Blcc::NAME->value; ?>"></div>
+
+        <nav>
+            <?php
+
+            foreach (array_slice($navBar, 3, 6) as $b) {
+                echo '<a href="' . $b['href'] . '">' . $b['icon'] . '' . $b['name'] . '</a>';
+            }
+
+            ?>
+        </nav>
+
+        <div class="date-time">
+            <div id="date"></div>
+            <div id="time"></div>
+        </div>
+
+        <!-- <div class="mode">
+<div class="mode-sun">
+    <i class='bx bx-sun'></i>
 </div>
-</header>
+<div>
+    <label>
+        <input onClick="switchVariables();" type="checkbox">
+        <span class="slider round"></span>
+    </label>
+</div>
+<div class="mode-moon">
+    <i class='bx bx-moon'></i>
+</div>
+</div> -->
+    </header>

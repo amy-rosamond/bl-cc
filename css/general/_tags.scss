@@ -1,3 +1,4 @@
+@use '../components/animation' as *;
 @import url("https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap");
 
 
@@ -6,7 +7,7 @@
     font-family: "BIZ UDPMincho", serif;
     font-weight: 400;
     font-style: normal;
-    color: var(--text);
+    color: var(--white);
     letter-spacing: .5px;
     transition: all .3s ease-in-out;
 }
@@ -38,4 +39,20 @@ a {
         text-decoration: none;
         color: rgb(254 115 105);
     }
+}
+
+button {
+    font-family: "BIZ UDPMincho", serif;
+    display: flex;
+    place-items: center;
+    padding: 10px 30px;
+    color: var(--black);
+    background-color: var(--secondary);
+    border-radius: 4rem;
+    border: 0px solid var(--black);
+    font-size: 20px;
+    @include backgroundFromBottomBlack;
+    margin: 10px;
+    font-weight: 600;
+    cursor: pointer;
 }

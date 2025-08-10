@@ -1,9 +1,11 @@
 <script src="script/variables.js?r=123"></script>
+<script src="script/script.js?r=123"></script>
 
 <footer>
     <?php
 
     include('includes/nav-array.php');
+
 
     ?>
 
@@ -47,8 +49,10 @@
     </nav>
 
 
-    <div><img src="img/logos/bl-logo-round.png" alt="<?= Baseit::NAME->value; ?>"></div>
+    <div><img src="img/logos/bl-logo-footer.png" alt="<?= Blcc::NAME->value; ?>"></div>
 
 </footer>
+
+</body>
 
 </html>

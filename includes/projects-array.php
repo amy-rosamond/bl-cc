@@ -27,7 +27,7 @@ $projects[4] = array(
 );
 
 $projects[5] = array(
-    'img' => 'img/lights/baseit-kitchen-2.jpg',
+    'img' => 'img/lights/Blcc-kitchen-2.jpg',
     'title' => 'Kitchen Light Installation',
     'info' => 'Kitchen Light information'
 );

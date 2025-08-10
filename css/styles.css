@@ -4,7 +4,7 @@
   font-family: "BIZ UDPMincho", serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--text);
+  color: var(--white);
   letter-spacing: 0.5px;
   transition: all 0.3s ease-in-out;
 }
@@ -35,14 +35,56 @@ a:hover {
   color: rgb(254, 115, 105);
 }
 
+button {
+  font-family: "BIZ UDPMincho", serif;
+  display: flex;
+  place-items: center;
+  padding: 10px 30px;
+  color: var(--black);
+  background-color: var(--secondary);
+  border-radius: 4rem;
+  border: 0px solid var(--black);
+  font-size: 20px;
+  background-image: linear-gradient(var(--black), var(--black));
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0%;
+  margin: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover {
+  color: var(--secondary);
+  background-size: 100% 100%;
+}
+button:hover i {
+  color: var(--secondary);
+}
+button:hover svg {
+  stroke: var(--secondary);
+}
+
+.page-heading {
+  padding: 30px 20px;
+}
+.page-heading h1 {
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+.page-heading h1,
+.page-heading p {
+  text-align: center;
+}
+
 header {
   display: flex;
   justify-content: space-evenly;
-  padding: 20px 20px;
+  padding: 0px 20px 5px;
   background-color: var(--primary);
+  border-bottom: 2px solid var(--black);
 }
 header img {
-  max-width: 100px;
+  max-width: 400px;
   width: 100%;
 }
 header nav {
@@ -65,83 +107,38 @@ header nav a {
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: 100% 3%;
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text);
+  font-weight: 400;
+}
+header nav a:hover {
+  background-size: 100% 100%;
+  color: var(--black);
+}
+header nav a:hover svg {
+  stroke: var(--black);
+}
+header nav a:hover i {
+  color: var(--black);
 }
 header nav a svg {
   stroke: var(--secondary);
-  width: 35px;
+  width: 25px;
   margin-right: 5px;
 }
-header nav a:hover {
-  color: var(--white);
-  background-size: 100% 100%;
-}
-header nav a:hover svg {
-  stroke: var(--white);
-  width: 35px;
-  margin-right: 5px;
-}
-
-.mode {
+header .date-time {
   display: flex;
-  height: 30px;
-  max-width: 115px;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.mode div {
-  display: flex;
-}
-.mode-sun, .mode-moon {
-  display: flex;
-  align-items: center;
-}
-.mode-sun i, .mode-moon i {
-  color: var(--secondary);
-  font-size: 1.5rem;
-}
-.mode label {
-  position: relative;
-  display: inline-block;
-  width: 47px;
-  height: 21px;
-}
-.mode label input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.mode label input:checked + .slider:before {
-  background-color: #000;
-}
-.mode label input:checked + .slider:before {
-  transform: translateX(26px);
-}
-.mode .slider {
+  flex-direction: column;
+  padding: 10px;
   position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--secondary);
-  transition: 0.4s;
-  border-radius: 34px;
+  right: 0px;
+  top: 0px;
 }
-.mode .slider:before {
-  position: absolute;
-  content: "";
-  height: 15px;
-  width: 15px;
-  left: 4px;
-  bottom: 2.8px;
-  background-color: var(--white);
-  transition: 0.4s;
-  border-radius: 50%;
+header .date-time div {
+  padding: 5px;
+  text-align: center;
 }
 
 footer {
@@ -149,8 +146,9 @@ footer {
   justify-content: space-evenly;
   padding: 20px 20px;
   background-color: var(--primary);
-  border-top: 2px solid var(--black-yellow);
+  border-top: 2px solid var(--black);
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 footer img {
   max-width: 300px;
@@ -162,12 +160,14 @@ footer nav {
   display: flex;
   padding: 10px 0px;
   flex-direction: column;
+  position: relative;
+  z-index: 999999;
 }
 footer nav h3 {
   font-size: 22px;
   margin: 0px 10px 5px;
   padding: 10px 5px;
-  border-bottom: 2px solid var(--black-yellow);
+  border-bottom: 2px solid var(--black);
 }
 footer nav a,
 footer nav p {
@@ -175,25 +175,39 @@ footer nav p {
   max-width: 280px;
   width: 100%;
   margin: 0px 10px;
-  background-image: linear-gradient(var(--secondary), var(--secondary));
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
   padding: 10px 5px;
   display: flex;
   align-items: center;
   border-radius: 3px;
+  font-weight: 400;
+  background-image: linear-gradient(var(--secondary), var(--secondary));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
   color: var(--white);
+}
+footer nav a:hover,
+footer nav p:hover {
+  color: var(--black);
+  background-size: 100% 100%;
+}
+footer nav a:hover strong,
+footer nav a:hover i,
+footer nav a:hover span,
+footer nav p:hover strong,
+footer nav p:hover i,
+footer nav p:hover span {
+  color: var(--black);
+}
+footer nav a:hover svg,
+footer nav p:hover svg {
+  stroke: var(--black);
 }
 footer nav a strong,
 footer nav p strong {
   letter-spacing: 1px;
-}
-footer nav a strong span,
-footer nav p strong span {
   color: var(--secondary);
-  font-weight: 900;
-  font-size: 20px;
+  font-weight: 400;
 }
 footer nav a svg,
 footer nav p svg {
@@ -206,19 +220,6 @@ footer nav p i {
   font-size: 30px;
   color: var(--secondary);
   margin-right: 5px;
-}
-footer nav a:hover,
-footer nav p:hover {
-  color: #fff;
-  background-size: 100% 100%;
-}
-footer nav a:hover svg,
-footer nav p:hover svg {
-  stroke: var(--white);
-}
-footer nav a:hover i,
-footer nav p:hover i {
-  color: var(--white);
 }
 footer nav p {
   justify-content: space-between;
@@ -237,55 +238,69 @@ footer div img {
 }
 
 .contact-box {
-  max-width: 210px;
+  max-width: 500px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
   background-color: var(--grey);
   border-radius: 5px;
-  margin: 5px;
-  border: 2px solid var(--black-yellow);
+  margin: 10px;
+  padding: 35px 20px;
+  position: relative;
+  bottom: 60px;
+  z-index: 2;
 }
 .contact-box-container {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact-box-bottom {
+  background-color: var(--dark-grey);
+  bottom: 104px;
+  z-index: 1;
+}
+.contact-box svg {
+  width: 50px;
+  stroke: var(--secondary);
 }
 .contact-box p {
   text-align: center;
   margin: 0;
+}
+.contact-box-social {
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin: 5px 0px;
 }
-.contact-box p:first-child {
-  margin: 0px;
-}
-.contact-box p:last-child {
-  margin-bottom: 0px;
-}
-.contact-box p i {
-  color: var(--secondary);
-  font-size: 40px;
-}
-.contact-box p button {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 10px;
+.contact-box-social a {
   background-color: var(--secondary);
-  color: #fff;
-  border-radius: 3px;
-  border: 2px solid var(--mode);
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 1px;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-image: linear-gradient(var(--black), var(--black));
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0%;
   cursor: pointer;
 }
-.contact-box p button:hover {
-  border-radius: 50px;
+.contact-box-social a:hover {
+  color: var(--secondary);
+  background-size: 100% 100%;
+}
+.contact-box-social a:hover i {
+  color: var(--secondary);
+}
+.contact-box-social a:hover svg {
+  stroke: var(--secondary);
+}
+.contact-box-social a i {
+  font-size: 24px;
+  color: var(--black);
 }
 
 .project-card {
@@ -330,7 +345,7 @@ footer div img {
   align-items: center;
 }
 .project-card-front {
-  background-color: var(--blue-yellow);
+  background-color: var(--secondary);
 }
 .project-card-back {
   color: #fff !important;
@@ -379,13 +394,10 @@ footer div img {
   --primary: rgb(57, 58, 60);
   --secondary: rgb(255, 147, 0);
   --white: #fff;
-  --text: #fff;
-  --mode: #000;
-  --grey: rgb(229, 232, 236);
-  --black-yellow: #000;
-  --blue-yellow: rgb(56, 151, 200);
+  --black: #000;
+  --grey: rgb(77, 78, 80);
+  --dark-grey: rgb(41, 42, 44);
   --yellow: rgb(251, 251, 114);
   --light-yellow: rgb(244, 244, 158);
-  --darkest-blue: rgb(11, 31, 69);
   --fontfamily-BIZ: "BIZ UDPMincho", serif;
 }/*# sourceMappingURL=styles.css.map */

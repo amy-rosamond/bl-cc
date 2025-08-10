@@ -1,5 +1,10 @@
 <?php
 
+// include('variables.php');
+
+?>
+<?php
+
 $navBar = array();
 // heroicons
 $navBar[1] = array(
@@ -15,7 +20,7 @@ $navBar[2] = array(
     <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
     </svg>',
     "href" => 'index.php',
-    "name" => 'About Us'
+    "name" => 'About'
 );
 
 $navBar[3] = array(
@@ -36,18 +41,18 @@ $navBar[4] = array(
 
 $navBar[5] = array(
     "icon" => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
-    </svg>',
-    "href" => 'projects.php',
-    "name" => 'Projects'
-);
-
-$navBar[6] = array(
-    "icon" => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
     <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
     </svg>',
     "href" => "contact.php",
     "name" => "Contact"
+);
+
+$navBar[6] = array(
+    "icon" => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+    </svg>',
+    "href" => 'projects.php',
+    "name" => 'Projects'
 );
 
 
@@ -55,50 +60,56 @@ $navBar[6] = array(
 $navBarFooter = array();
 
 $navBarFooter[1] = array(
-    "icon" => '<i class="bx bxl-instagram"></i>',
-    "href" => '#',
-    "name" => 'Instagram Us'
+    "icon" => Blcc::INSTAICON->value,
+    "href" => Blcc::INSTALINK->value,
+    "name" => 'Instagram'
 );
 
 $navBarFooter[2] = array(
-    "icon" => '<i class="bx bxl-facebook"></i>',
-    "href" => '#',
-    "name" => 'Facebook Us'
+    "icon" => Blcc::FBICON->value,
+    "href" => Blcc::FBLINK->value,
+    "name" => 'Facebook'
 );
 
 $navBarFooter[3] = array(
-    "icon" => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
-    </svg>',
-    "href" => 'tel:' . Baseit::TEL->value . '',
-    "name" => 'Phone Us'
+    "icon" => Blcc::INICON->value,
+    "href" => Blcc::INLINK->value,
+    "name" => 'LinkedIn'
 );
 
 $navBarFooter[4] = array(
     "icon" => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
     </svg>',
-    "href" => 'mailto:' . Baseit::EMAIL->value . '',
-    "name" => 'Email Us'
+    "href" => 'tel:' . Blcc::TEL->value . '',
+    "name" => 'Phone'
 );
 
 $navBarFooter[5] = array(
+    "icon" => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+    </svg>',
+    "href" => 'mailto:' . Blcc::EMAIL->value . '',
+    "name" => 'Email'
+);
+
+$navBarFooter[6] = array(
     "icon" => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
     <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
     </svg>',
     "href" => '#',
-    "name" => 'Locate Us'
+    "name" => 'Locate'
 );
 
 $navBarFooterHours = array();
 
 $navBarFooterHours[0] = array(
-    "monday" => '<strong><span>M</span>onday</strong> <span>07:00 - 17:00</span>',
-    "tuesday" => '<strong><span>T</span>uesday</strong> <span>07:00 - 17:00</span>',
-    "wednesday" => '<strong><span>W</span>ednesday</strong> <span>07:00 - 17:00</span>',
-    "thursday" => '<strong><span>T</span>hursday</strong> <span>07:00 - 17:00</span>',
-    "friday" => '<strong><span>F</span>riday</strong> <span>07:00 - 17:00</span>',
-    "saturday" => '<strong><span>S</span>aturday</strong> <span>10:00 - 16:00</span>',
-    "sunday" => '<strong><span>S</span>unday</strong> <span>Closed</span>'
+    "monday" => '<strong>Monday</strong> <span>07:00 - 18:00</span>',
+    "tuesday" => '<strong>Tuesday</strong> <span>07:00 - 18:00</span>',
+    "wednesday" => '<strong>Wednesday</strong> <span>07:00 - 18:00</span>',
+    "thursday" => '<strong>Thursday</strong> <span>07:00 - 18:00</span>',
+    "friday" => '<strong>Friday</strong> <span>07:00 - 18:00</span>',
+    "saturday" => '<strong>Saturday</strong> <span>10:00 - 16:00</span>',
+    "sunday" => '<strong>Sunday</strong> <span>10:00 - 13:00</span>'
 );
