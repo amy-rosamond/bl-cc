@@ -1,5 +1,4 @@
 <script src="script/variables.js?r=123"></script>
-<script src="script/script.js?r=123"></script>
 
 <footer>
     <?php
@@ -53,6 +52,3 @@
 
 </footer>
 
-</body>
-
-</html>

@@ -31,7 +31,7 @@
             <?php
 
             foreach (array_slice($navBar, 0, 3) as $a) {
-                echo '<a href="' . $a['href'] . '">' . $a['icon'] . '' . $a['name'] . '</a>';
+                echo '<a id="' . $a['id'] . '" href="' . $a['href'] . '">' . $a['icon'] . '' . $a['name'] . '</a>';
             }
 
             ?>
@@ -43,7 +43,7 @@
             <?php
 
             foreach (array_slice($navBar, 3, 6) as $b) {
-                echo '<a href="' . $b['href'] . '">' . $b['icon'] . '' . $b['name'] . '</a>';
+                echo '<a id="' . $b['id'] . '" href="' . $b['href'] . '">' . $b['icon'] . '' . $b['name'] . '</a>';
             }
 
             ?>
@@ -51,6 +51,7 @@
 
         <div class="date-time">
             <div id="date"></div>
+            <div>|</div>
             <div id="time"></div>
         </div>
 

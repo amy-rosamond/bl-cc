@@ -71,8 +71,8 @@ $socialMedia[3] = array(
         <div class="contact-box-social">
             <?php
             foreach ($socialMedia as $social) {
-                    echo '<a hef="' . $social['link'] . '">' . $social['icon'] . '</a>';
-                }
+                echo '<a hef="' . $social['link'] . '">' . $social['icon'] . '</a>';
+            }
             ?>
         </div>
     </div>
@@ -93,13 +93,30 @@ $socialMedia[3] = array(
         <h2>Need inspiration?</h2>
         <?php echo '<p>Take a look at ' . Blcc::NAME->value . '\'s previous projects.</p>' ?>
         <div>
-            <!-- <a href="projects.php"> -->
-                <button onclick="location.href='projects.php';">Previous Projects</button>
-            <!-- </a> -->
+            <a class="a-button" href="projects.php">
+                Previous Projects
+            </a>
         </div>
     </div>
 </div>
 
 <?php
 include('footer.php');
+
 ?>
+
+<script src="script/script.js?r=123"></script>
+
+<script>
+    window.addEventListener('load', function() {
+        pageOnload('contact');
+    });
+    
+    // window.onload = function() {
+    //     pageOnload('contact');
+    // }
+</script>
+
+</body>
+
+</html>

@@ -1,9 +1,10 @@
 @use "../components/animation" as *;
+@use "../components/mixins" as *;
 
 header {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0px 20px 5px;
+    @include flexbox($justifyContent: space-evenly);
+    // 15 top for responsive time & date
+    padding: 15px 20px 5px;
     // margin-bottom: 20px;
     background-color: var(--primary);
     border-bottom: 2px solid var(--black);
@@ -14,26 +15,22 @@ header {
     }
 
     nav {
+        @include flexbox($placeContent: center);
         max-width: 1100px;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         padding: 10px 0px;
         flex-wrap: wrap;
     
         a {
+            @include flexbox($placeContent: center, $placeItems: center);
             font-size: 22px;
             max-width: 180px;
             width: 100%;
             height: 50px;
             margin: 3px 10px;
             border-radius: 3px;
-            @include backgroundFromBottomUnderline;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-weight: 400;
+            @include backgroundFromBottomUnderline;
 
             svg {
                 stroke: var(--secondary);
@@ -41,12 +38,22 @@ header {
                 margin-right: 5px;
             }
         }
+
+        .active {
+            background-size: 100% 100%;
+            color: var(--black);
+
+            svg {
+                stroke: var(--black);
+            }
+        }
     }
 
     .date-time {
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
+        // fixed width & space evenly so when time ends with 1 width doesn't change
+        @include flexbox($justifyContent: space-evenly);
+        width: 230px;
+        padding: 5px;
         position: absolute;
         right: 0px;
         top: 0px;
@@ -54,6 +61,17 @@ header {
         div {
             padding: 5px;
             text-align: center;
+        }
+
+        div:nth-child(2) {
+            color: var(--secondary);
+            font-weight: 900;
+        }
+
+        div:nth-child(3) {
+            // fixed width so when time ends with 1 width doesn't change
+            width: 88px;
+            text-align: left;
         }
     }
 }

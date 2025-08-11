@@ -1,13 +1,12 @@
 @use "../components/animation" as *;
+@use "../components/mixins" as *;
 
 footer {
-    display: flex;
-    justify-content: space-evenly;
+    @include flexbox($justifyContent: space-evenly, $wrap: wrap);
     padding: 20px 20px;
     background-color: var(--primary);
     border-top: 2px solid var(--black);
     margin-top: 30px;
-    flex-wrap: wrap;
 
     img {
         max-width: 300px;
@@ -15,12 +14,10 @@ footer {
     }
 
     nav {
+        @include flexbox($direction: column);
         max-width: 300px;
         width: 100%;
-        display: flex;
-        // justify-content: center;
         padding: 10px 0px;
-        flex-direction: column;
         position: relative;
         z-index: 999999;
 
@@ -33,6 +30,7 @@ footer {
 
         a,
         p {
+            @include flexbox($alignItems: center);
             font-size: 18px;
             max-width: 280px;
             // text-align: center;
@@ -40,8 +38,6 @@ footer {
             margin: 0px 10px;
             // background-image: url(../../img/icons/tape.png);
             padding: 10px 5px;
-            display: flex;
-            align-items: center;
             border-radius: 3px;
             font-weight: 400;
             @include backgroundFromLeft;
@@ -82,16 +78,15 @@ footer {
         }
 
         p {
-            justify-content: space-between;
+            @include flexbox($justifyContent: space-between);
         }
     }
 
     div {
+        @include flexbox($justifyContent: center);
         position: absolute;
         z-index: 1;
         width: 100%;
-        display: flex;
-        justify-content: center;
 
         img {
             max-width: 700px;

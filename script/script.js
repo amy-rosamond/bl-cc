@@ -1,3 +1,39 @@
+const pageOnload = (page) => {
+    const contact = document.getElementById('contact');
+    const index = document.getElementById('index');
+    const projects = document.getElementById('projects');
+    const services = document.getElementById('services');
+    const reviews = document.getElementById('reviews');
+
+    index.classList.remove('active');
+    contact.classList.remove('active');
+    projects.classList.remove('active');
+    services.classList.remove('active');
+    reviews.classList.remove('active');
+
+    switch (page) {
+        case 'index':
+            index.classList.add('active');
+            break;
+        case 'contact':
+            contact.classList.add('active');
+            break;
+        case 'projects':
+            projects.classList.add('active');
+            break;
+        case 'services':
+            services.classList.add('active');
+            break;
+        case 'reviews':
+            reviews.classList.add('active');
+            break;
+    }
+}
+
+// window.onload = function () { 
+
+// }
+
 function startTime() {
     const today = new Date();
 
