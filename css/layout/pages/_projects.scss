@@ -17,6 +17,7 @@
             padding: 20px;
             border-radius: 5px;
             margin: 10px 20px;
+            // border: 1px solid var(--black);
         }
 
         &-info {
@@ -35,7 +36,7 @@
         cursor: pointer;
         margin: 5px;
         transition: all .3s ease-in-out;
-        height: calc(100vh - 330px);
+        height: 500px;
 
         &-inner {
             @include flexbox($justifyContent: center);
@@ -62,7 +63,6 @@
         &-front {
             // background-color: var(--black);
             border: 5px double var(--black);
-            border: 5px double var(--secondary);
             height: fit-content;
             border-radius: 5px;
         }
