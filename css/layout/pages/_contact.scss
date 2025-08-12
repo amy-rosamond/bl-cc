@@ -3,23 +3,28 @@
 
 .contact-box {
     &-container {
+        @include flexbox($justifyContent: center);
+    }
+
+    &-wrapper {
         @include flexbox($justifyContent: center, $wrap: wrap);
+        max-width: 1200px;
+        width: 100%;
     }
 
     @include flexbox($placeItems: center, $direction: column);
-    max-width: 500px;
+    max-width: 550px;
     width: 100%;
     background-color: var(--grey);
     border-radius: 5px;
     margin: 10px;
     padding: 35px 20px;
     position: relative;
-    bottom: 60px;
     z-index: 2;
 
     &-bottom {
         background-color: var(--dark-grey);
-        bottom: 104px;
+        bottom: 45px;
         z-index: 1;
     }
 

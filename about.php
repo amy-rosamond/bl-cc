@@ -4,8 +4,8 @@ include('includes/variables.php');
 include('header.php');
 
 echo '<div class="page-heading">
-    <h1>Reviews</h1>
-    <p data-aos="flip-right" data-aos-duration="500">Read all of ' . Blcc::NAME->value . '\'s great reviews.</p>
+    <h1>About Us</h1>
+    <p>Everything ' . Blcc::NAME->value . '.</p>
 </div>';
 
 include('footer.php');
@@ -16,12 +16,8 @@ include('footer.php');
 
 <script>
     window.addEventListener('load', function() {
-        pageOnload('reviews');
+        pageOnload('about');
     });
-    
-    // window.onload = function() {
-    //     pageOnload('reviews');
-    // }
 </script>
 
 </body>

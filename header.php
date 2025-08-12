@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lenis">
 
 <head>
 
@@ -11,11 +11,34 @@
     <link rel="icon" href="img/logos/bl-logo-round.png">
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
+
+    <style>
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body onload="startTime();">
@@ -27,7 +50,7 @@
 
         ?>
 
-        <nav>
+        <nav class="scale-up-center">
             <?php
 
             foreach (array_slice($navBar, 0, 3) as $a) {
@@ -39,7 +62,7 @@
 
         <div><img src="img/logos/bl-logo-round.png" alt="<?= Blcc::NAME->value; ?>"></div>
 
-        <nav>
+        <nav class="scale-up-center">
             <?php
 
             foreach (array_slice($navBar, 3, 6) as $b) {

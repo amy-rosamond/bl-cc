@@ -1,4 +1,103 @@
 @import url("https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap");
+.tracking-in-expand {
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.scale-up-center {
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.scale-in-hor-center {
+  animation: scale-in-hor-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes scale-in-hor-center {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--primary);
+}
+.modal-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: var(--grey);
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 20px;
+  width: 95%;
+  /* Could be more or less, depending on screen size */
+}
+.modal-content div {
+  max-width: 800px;
+  width: 100%;
+}
+.modal-content div img {
+  max-width: 800px;
+  width: 100%;
+}
+.modal-content div:nth-child(2) {
+  max-width: unset;
+}
+.modal-close {
+  float: right;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  flex-wrap: nowrap;
+}
+.modal-close svg {
+  stroke: var(--black);
+  width: 50px;
+}
+.modal-close:hover, .modal-close:focus {
+  background-color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-close:hover svg, .modal-close:focus svg {
+  stroke: var(--secondary);
+}
+
 * {
   box-sizing: border-box;
   font-family: "BIZ UDPMincho", serif;
@@ -13,6 +112,7 @@ html,
 body {
   background-color: var(--background);
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -68,16 +168,64 @@ button:hover svg {
   stroke: var(--secondary);
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 .page-heading {
   padding: 30px 20px;
+  background-color: var(--dark-grey);
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 1;
 }
 .page-heading h1 {
   font-size: 36px;
-  letter-spacing: 1px;
+}
+.page-heading h2 {
+  font-size: 30px;
 }
 .page-heading h1,
+.page-heading h2 {
+  letter-spacing: 1px;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+.page-heading h1,
+.page-heading h2,
 .page-heading p {
   text-align: center;
+}
+.page-heading-overlap {
+  position: relative;
+  z-index: 4;
+  bottom: 45px;
+  padding: 0px 20px;
+}
+
+.container-overlap {
+  position: relative;
+  z-index: 2;
+  bottom: 85px;
+}
+.container-overlap-projects {
+  bottom: 125px;
 }
 
 header {
@@ -90,7 +238,7 @@ header {
   border-bottom: 2px solid var(--black);
 }
 header img {
-  max-width: 400px;
+  max-width: 350px;
   width: 100%;
 }
 header nav {
@@ -116,6 +264,7 @@ header nav a {
   margin: 3px 10px;
   border-radius: 3px;
   font-weight: 400;
+  text-align: center;
   background-image: linear-gradient(var(--secondary), var(--secondary));
   background-position: 50% 100%;
   background-repeat: no-repeat;
@@ -138,11 +287,11 @@ header nav a svg {
   margin-right: 5px;
 }
 header nav .active {
-  background-size: 100% 100%;
-  color: var(--black);
+  background-color: var(--dark-grey);
+  color: var(--secondary);
 }
 header nav .active svg {
-  stroke: var(--black);
+  stroke: var(--secondary);
 }
 header .date-time {
   display: flex;
@@ -278,25 +427,32 @@ footer div img {
   flex-direction: column;
   place-items: center;
   flex-wrap: nowrap;
-  max-width: 500px;
+  max-width: 550px;
   width: 100%;
   background-color: var(--grey);
   border-radius: 5px;
   margin: 10px;
   padding: 35px 20px;
   position: relative;
-  bottom: 60px;
   z-index: 2;
 }
 .contact-box-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: nowrap;
+}
+.contact-box-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
 }
 .contact-box-bottom {
   background-color: var(--dark-grey);
-  bottom: 104px;
+  bottom: 45px;
   z-index: 1;
 }
 .contact-box svg {
@@ -343,6 +499,55 @@ footer div img {
   color: var(--black);
 }
 
+.project-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.project-nav nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  width: 100%;
+  background-color: var(--grey);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}
+.project-nav nav a {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  flex-wrap: nowrap;
+  line-height: 28px;
+  font-size: 20px;
+  max-width: 180px;
+  width: 100%;
+  margin: 10px;
+  padding: 6px;
+  border-radius: 3px;
+  font-weight: 400;
+  text-align: center;
+  background-image: linear-gradient(var(--secondary), var(--secondary));
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 3%;
+  color: var(--white);
+}
+.project-nav nav a:hover {
+  background-size: 100% 100%;
+  color: var(--black);
+}
+.project-nav nav a:hover svg {
+  stroke: var(--black);
+}
+.project-nav nav a:hover i {
+  color: var(--black);
+}
 .project-card {
   display: flex;
   flex-direction: column;
@@ -352,16 +557,13 @@ footer div img {
   cursor: pointer;
   margin: 5px;
   transition: all 0.3s ease-in-out;
-  height: 500px;
+  height: 480px;
 }
 .project-card-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 30px 0px;
-  position: relative;
-  bottom: 75px;
 }
 .project-card-wrapper {
   display: flex;
@@ -369,7 +571,7 @@ footer div img {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  max-width: 500px;
+  max-width: 480px;
   width: 100%;
   background-color: var(--grey);
   padding: 20px;
@@ -396,7 +598,7 @@ footer div img {
   text-align: center;
 }
 .project-card-inner img {
-  max-height: 460px;
+  max-height: 440px;
   height: 100%;
   width: auto;
   border-radius: 2px;

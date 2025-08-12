@@ -1,0 +1,9 @@
+.container-overlap {
+    position: relative;
+    z-index: 2;
+    bottom: 85px;
+
+    &-projects {
+        bottom: 125px;
+    }
+}

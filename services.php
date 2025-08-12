@@ -3,7 +3,10 @@
 include('includes/variables.php');
 include('header.php');
 
-echo 'SERVICES';
+echo '<div class="page-heading">
+    <h1>Services</h1>
+    <p data-aos="flip-right" data-aos-duration="500">All we can offer here at ' . Blcc::NAME->value . '.</p>
+</div>';
 
 include('footer.php');
 

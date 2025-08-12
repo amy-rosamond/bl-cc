@@ -1,4 +1,12 @@
 <script src="script/variables.js?r=123"></script>
+<!-- <script src="script/modals.js?r=123"></script> -->
+<script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
 
 <footer>
     <?php
@@ -51,4 +59,3 @@
     <div><img src="img/logos/bl-logo-footer.png" alt="<?= Blcc::NAME->value; ?>"></div>
 
 </footer>
-
