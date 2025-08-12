@@ -24,8 +24,8 @@ $navBarProjects[4] = array(
 );
 
 $navBarProjects[5] = array(
-    "href" => '#studwork',
-    "name" => 'Stud-work'
+    "href" => '#framework',
+    "name" => 'Frame-work'
 );
 
 $navBarProjects[6] = array(
@@ -43,10 +43,10 @@ $navBarProjects[8] = array(
     "name" => 'Construction'
 );
 
-$navBarProjects[9] = array(
-    "href" => '#firstFix',
-    "name" => 'First Fix Carpentry'
-);
+// $navBarProjects[9] = array(
+//     "href" => '#firstFix',
+//     "name" => 'First Fix Carpentry'
+// );
 
 
 $kitchensInfo = array();
@@ -193,35 +193,35 @@ $joinery[3] = array(
 
 
 
-$studworkInfo = array();
+$frameworkInfo = array();
 
-$studworkInfo[1] = array(
-    'id' => 'studwork',
-    'title' => 'Stud-work Installations',
-    'info' => 'Take a look at BL Carpentry & Construction LTD\'s stud-work.'
+$frameworkInfo[1] = array(
+    'id' => 'framework',
+    'title' => 'Frame-work',
+    'info' => 'Take a look at BL Carpentry & Construction LTD\'s Frame-work.'
 );
 
-$studwork = array();
+$framework = array();
 
-$studwork[1] = array(
+$framework[1] = array(
     'img' => 'img/projects/bl-logo-no-text.png',
-    'title' => 'Stud-work',
+    'title' => 'Frame-work',
     'info' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'bgtitle' => 'extra title',
     'bginfo' => 'extra info'
 );
 
-$studwork[2] = array(
+$framework[2] = array(
     'img' => 'img/projects/bl-logo-no-text.png',
-    'title' => 'Stud-work',
+    'title' => 'Frame-work',
     'info' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'bgtitle' => 'extra title',
     'bginfo' => 'extra info'
 );
 
-$studwork[3] = array(
+$framework[3] = array(
     'img' => 'img/projects/bl-logo-no-text.png',
-    'title' => 'Stud-work',
+    'title' => 'Frame-work',
     'info' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'bgtitle' => 'extra title',
     'bginfo' => 'extra info'
@@ -337,38 +337,38 @@ $construction[3] = array(
 
 
 
-$firstFixInfo = array();
+// $firstFixInfo = array();
 
-$firstFixInfo[1] = array(
-    'id' => 'firstFix',
-    'title' => 'First Fix Carpentry',
-    'info' => 'Take a look at BL Carpentry & Construction LTD\'s First Fix Carpentry. This includes Frame work, etc...'
-);
+// $firstFixInfo[1] = array(
+//     'id' => 'firstFix',
+//     'title' => 'First Fix Carpentry',
+//     'info' => 'Take a look at BL Carpentry & Construction LTD\'s First Fix Carpentry. This includes Frame work, etc...'
+// );
 
-$firstFix = array();
+// $firstFix = array();
 
-$firstFix[1] = array(
-    'img' => 'img/projects/bl-logo-no-text.png',
-    'title' => 'First Fix',
-    'info' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'bgtitle' => 'extra title',
-    'bginfo' => 'extra info'
-);
+// $firstFix[1] = array(
+//     'img' => 'img/projects/bl-logo-no-text.png',
+//     'title' => 'First Fix',
+//     'info' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+//     'bgtitle' => 'extra title',
+//     'bginfo' => 'extra info'
+// );
 
-$firstFix[2] = array(
-    'img' => 'img/projects/bl-logo-no-text.png',
-    'title' => 'First Fix',
-    'info' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'bgtitle' => 'extra title',
-    'bginfo' => 'extra info'
-);
+// $firstFix[2] = array(
+//     'img' => 'img/projects/bl-logo-no-text.png',
+//     'title' => 'First Fix',
+//     'info' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+//     'bgtitle' => 'extra title',
+//     'bginfo' => 'extra info'
+// );
 
-$firstFix[3] = array(
-    'img' => 'img/projects/bl-logo-no-text.png',
-    'title' => 'First Fix',
-    'info' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'bgtitle' => 'extra title',
-    'bginfo' => 'extra info'
-);
+// $firstFix[3] = array(
+//     'img' => 'img/projects/bl-logo-no-text.png',
+//     'title' => 'First Fix',
+//     'info' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+//     'bgtitle' => 'extra title',
+//     'bginfo' => 'extra info'
+// );
 
 ?>

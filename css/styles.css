@@ -532,14 +532,16 @@ footer div img {
   border-radius: 3px;
   font-weight: 400;
   text-align: center;
-  background-image: linear-gradient(var(--secondary), var(--secondary));
-  background-position: 50% 100%;
+  border: 3px solid var(--secondary);
+  background-color: var(--secondary);
+  background-image: linear-gradient(var(--grey), var(--grey));
+  background-position: 100% 0%;
   background-repeat: no-repeat;
-  background-size: 100% 3%;
+  background-size: 100% 100%;
   color: var(--white);
 }
 .project-nav nav a:hover {
-  background-size: 100% 100%;
+  background-size: 100% 0%;
   color: var(--black);
 }
 .project-nav nav a:hover svg {
@@ -668,7 +670,7 @@ footer div img {
   --background: rgb(57, 58, 60);
   --background-img: url(../img/bg/wood-bg.jpg);
   --primary: rgb(57, 58, 60);
-  --secondary: rgb(255, 147, 0);
+  --secondary: rgb(0, 148, 172);
   --white: #fff;
   --black: #000;
   --grey: rgb(77, 78, 80);

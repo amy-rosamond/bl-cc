@@ -16,7 +16,7 @@ echo '<div class="page-heading">
         <?php
 
         foreach ($navBarProjects as $a) {
-            echo '<a id="' . $a['id'] . '" onClick="{( => { lenis?.scrollTo("' . $a['href'] . '");} }" href="' . $a['href'] . '">' . $a['name'] . '</a>';
+            echo '<a onClick="{( => { lenis?.scrollTo("' . $a['href'] . '");} }" href="' . $a['href'] . '">' . $a['name'] . '</a>';
         }
 
         ?>
@@ -168,11 +168,11 @@ foreach ($joinery as $p) {
 echo '</div>';
 
 
-// echo '<div id="studwork" class="page-heading container-overlap">
+// echo '<div id="framework" class="page-heading container-overlap">
 //     <h2>Stud-work</h2>
 //     <p>Take a look at ' . Blcc::NAME->value . '\'s Stud-work.</p>
 // </div>';
-foreach ($studworkInfo as $b) {
+foreach ($frameworkInfo as $b) {
     echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
     <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
     <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
@@ -181,7 +181,7 @@ foreach ($studworkInfo as $b) {
 
 echo '<div class="project-card-container container-overlap container-overlap-projects">';
 
-foreach ($joinery as $p) {
+foreach ($framework as $p) {
     $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
 
 
@@ -248,23 +248,23 @@ foreach ($construction as $p) {
 echo '</div>';
 
 
-foreach ($firstFixInfo as $b) {
-    echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
-    <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
-    <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
-</div>';
-}
+// foreach ($firstFixInfo as $b) {
+//     echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
+//     <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
+//     <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
+// </div>';
+// }
 
-echo '<div class="project-card-container container-overlap container-overlap-projects">';
+// echo '<div class="project-card-container container-overlap container-overlap-projects">';
 
-foreach ($firstFix as $p) {
-    $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
+// foreach ($firstFix as $p) {
+//     $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
 
 
-    echo $project->displayOutput();
-}
+//     echo $project->displayOutput();
+// }
 
-echo '</div>';
+// echo '</div>';
 
 
 

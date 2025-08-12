@@ -25,7 +25,26 @@
                 border-radius: 3px;
                 font-weight: 400;
                 text-align: center;
-                @include backgroundFromBottomUnderline;
+                border: 3px solid var(--secondary);
+                background-color: var(--secondary);
+                background-image: linear-gradient(var(--grey), var(--grey));
+                background-position: 100% 0%;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                color: var(--white);
+            
+                &:hover {
+                    background-size: 100% 0%;
+                    color: var(--black);
+            
+                    svg {
+                        stroke: var(--black);
+                    }
+            
+                    i {
+                        color: var(--black);
+                    }
+                }
             }
         }
     }
