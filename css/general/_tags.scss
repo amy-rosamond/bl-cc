@@ -1,4 +1,6 @@
 @use '../components/animation' as *;
+@use '../components/mixins' as *;
+
 @import url("https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap");
 
 
@@ -46,18 +48,21 @@ a {
 .a-button,
 button {
     font-family: "BIZ UDPMincho", serif;
-    display: flex;
-    place-items: center;
+    @include flexbox($placeContent: center, $placeItems: center);
     padding: 10px 30px;
     color: var(--black);
     background-color: var(--secondary);
     border-radius: 4rem;
-    border: 0px solid var(--black);
+    // border: 0px solid var(--black);
     font-size: 20px;
     @include backgroundFromBottomBlack;
     margin: 10px;
     font-weight: 600;
+    text-align: center;
     cursor: pointer;
+}
+button {
+    border: 0px solid var(--black);
 }
 
 //LENIS

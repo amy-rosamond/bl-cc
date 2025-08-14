@@ -1,0 +1,72 @@
+@use "../../components/animation" as *;
+@use "../../components/mixins" as *;
+
+.process {
+    &-container {
+        @include flexbox($placeContent: center, $placeItems: center);
+        margin-top: 30px;
+        padding: 30px 0px;
+        background-color: var(--dark-grey);
+    }
+
+    &-wrapper {
+        @include flexbox($placeContent: center, $placeItems: center, $direction: column);
+    }
+
+    @include flexbox($placeContent: center, $placeItems: center, $direction: column);
+    width: 100%;
+    padding: 20px;
+    background-color: var(--primary);
+
+    &-row {
+        @include flexbox($placeContent: center, $placeItems: center);
+        max-width: 900px;
+        width: 100%;
+
+        .process:last-child {
+            background-color: var(--dark-grey);
+        }
+    }
+
+    &-row:nth-child(odd) {
+        .process:first-child {
+            border-right: 2px solid var(--secondary);
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            position: relative;
+            left: 1px;
+        }
+    }
+
+    &-row:nth-child(even) {
+        @include flexbox($direction: row-reverse);
+
+        .process:first-child {
+            border-left: 2px solid var(--secondary);
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            position: relative;
+        }
+    }
+
+    &-svg {
+        @include flexbox($placeContent: center, $placeItems: center);
+        background-color: var(--dark-grey);
+        padding: 15px;
+        border-radius: 50%;
+
+        svg {
+            width: 45px;
+            stroke: var(--secondary);
+        }
+    }
+
+    h2,
+    p {
+        text-align: center;
+    }
+}

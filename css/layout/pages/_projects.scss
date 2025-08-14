@@ -16,8 +16,8 @@
 
             a {
                 @include flexbox($placeContent: center, $placeItems: center);
-                line-height: 28px;
-                font-size: 20px;
+                line-height: 25px;
+                font-size: 18px;
                 max-width: 180px;
                 width: 100%;
                 margin: 10px;
@@ -169,6 +169,17 @@
                     }
                 }
             }
+        }
+    }
+
+    &-back-to-top {
+        @include flexbox($placeContent: center);
+        position: relative;
+        bottom: 120px;
+
+        a {
+            max-width: 300px;
+            width: 100%;
         }
     }
 }

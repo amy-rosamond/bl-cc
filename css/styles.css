@@ -139,12 +139,14 @@ a:hover {
 button {
   font-family: "BIZ UDPMincho", serif;
   display: flex;
+  flex-direction: row;
+  place-content: center;
   place-items: center;
+  flex-wrap: nowrap;
   padding: 10px 30px;
   color: var(--black);
   background-color: var(--secondary);
   border-radius: 4rem;
-  border: 0px solid var(--black);
   font-size: 20px;
   background-image: linear-gradient(var(--black), var(--black));
   background-position: 50% 100%;
@@ -152,6 +154,7 @@ button {
   background-size: 100% 0%;
   margin: 10px;
   font-weight: 600;
+  text-align: center;
   cursor: pointer;
 }
 .a-button:hover,
@@ -166,6 +169,10 @@ button:hover i {
 .a-button:hover svg,
 button:hover svg {
   stroke: var(--secondary);
+}
+
+button {
+  border: 0px solid var(--black);
 }
 
 html.lenis,
@@ -523,8 +530,8 @@ footer div img {
   place-content: center;
   place-items: center;
   flex-wrap: nowrap;
-  line-height: 28px;
-  font-size: 20px;
+  line-height: 25px;
+  font-size: 18px;
   max-width: 180px;
   width: 100%;
   margin: 10px;
@@ -664,6 +671,98 @@ footer div img {
 .project-card:active .project-card-back p {
   background-size: 100% 100%;
   transition: all 0.3s ease-in-out;
+}
+.project-back-to-top {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  flex-wrap: nowrap;
+  position: relative;
+  bottom: 120px;
+}
+.project-back-to-top a {
+  max-width: 300px;
+  width: 100%;
+}
+
+.process {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--primary);
+}
+.process-container {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  flex-wrap: nowrap;
+  margin-top: 30px;
+  padding: 30px 0px;
+  background-color: var(--dark-grey);
+}
+.process-wrapper {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  flex-wrap: nowrap;
+}
+.process-row {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  flex-wrap: nowrap;
+  max-width: 900px;
+  width: 100%;
+}
+.process-row .process:last-child {
+  background-color: var(--dark-grey);
+}
+.process-row:nth-child(odd) .process:first-child {
+  border-right: 2px solid var(--secondary);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  position: relative;
+  left: 1px;
+}
+.process-row:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+}
+.process-row:nth-child(even) .process:first-child {
+  border-left: 2px solid var(--secondary);
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  position: relative;
+}
+.process-svg {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  flex-wrap: nowrap;
+  background-color: var(--dark-grey);
+  padding: 15px;
+  border-radius: 50%;
+}
+.process-svg svg {
+  width: 45px;
+  stroke: var(--secondary);
+}
+.process h2,
+.process p {
+  text-align: center;
 }
 
 :root {

@@ -5,7 +5,7 @@ include('includes/variables.php');
 include('header.php');
 
 echo '<div class="page-heading">
-    <h1>Projects</h1>
+    <h1 id="projects">Projects</h1>
     <p data-aos="flip-right" data-aos-duration="500">Check out all our hard work here at ' . Blcc::NAME->value . '.</p>
 </div>';
 
@@ -94,7 +94,7 @@ foreach ($kitchens as $p) {
     echo $project->displayOutput();
 }
 
-echo '</div>';
+echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
 
 
 // echo '<div id="doors" class="page-heading container-overlap">
@@ -118,7 +118,7 @@ foreach ($doors as $p) {
     echo $project->displayOutput();
 }
 
-echo '</div>';
+echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
 
 
 // echo '<div id="roofs" class="page-heading container-overlap">
@@ -142,7 +142,7 @@ foreach ($roofs as $p) {
     echo $project->displayOutput();
 }
 
-echo '</div>';
+echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
 
 
 // echo '<div id="joinery" class="page-heading container-overlap">
@@ -165,7 +165,7 @@ foreach ($joinery as $p) {
     echo $project->displayOutput();
 }
 
-echo '</div>';
+echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
 
 
 // echo '<div id="framework" class="page-heading container-overlap">
@@ -188,7 +188,7 @@ foreach ($framework as $p) {
     echo $project->displayOutput();
 }
 
-echo '</div>';
+echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
 
 
 foreach ($secondFixInfo as $b) {
@@ -207,7 +207,7 @@ foreach ($secondFix as $p) {
     echo $project->displayOutput();
 }
 
-echo '</div>';
+echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
 
 
 foreach ($flooringInfo as $b) {
@@ -226,7 +226,7 @@ foreach ($flooring as $p) {
     echo $project->displayOutput();
 }
 
-echo '</div>';
+echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
 
 
 foreach ($constructionInfo as $b) {
@@ -245,7 +245,7 @@ foreach ($construction as $p) {
     echo $project->displayOutput();
 }
 
-echo '</div>';
+echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
 
 
 // foreach ($firstFixInfo as $b) {
@@ -264,7 +264,7 @@ echo '</div>';
 //     echo $project->displayOutput();
 // }
 
-// echo '</div>';
+// echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
 
 
 
