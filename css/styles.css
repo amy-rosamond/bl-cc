@@ -524,6 +524,7 @@ footer div img {
   border-radius: 5px;
   padding: 10px;
   margin: 20px;
+  border: 1px solid var(--secondary);
 }
 .project-nav nav a {
   display: flex;
@@ -540,8 +541,8 @@ footer div img {
   border-radius: 3px;
   font-weight: 400;
   text-align: center;
-  border: 3px solid var(--secondary);
-  background-color: var(--secondary);
+  border: 3px solid var(--dark-grey);
+  background-color: var(--dark-grey);
   background-image: linear-gradient(var(--grey), var(--grey));
   background-position: 100% 0%;
   background-repeat: no-repeat;
@@ -550,7 +551,7 @@ footer div img {
 }
 .project-nav nav a:hover {
   background-size: 100% 0%;
-  color: var(--black);
+  color: var(--secondary);
 }
 .project-nav nav a:hover svg {
   stroke: var(--black);
@@ -587,6 +588,7 @@ footer div img {
   padding: 20px;
   border-radius: 5px;
   margin: 10px 20px;
+  border: 1px solid var(--secondary);
 }
 .project-card-info {
   display: flex;
@@ -799,7 +801,7 @@ footer div img {
   --primary: rgb(54, 55, 57);
   --secondary: rgb(255, 147, 0);
   --white: #fff;
-  --black: #000;
+  --black: #191919;
   --grey: rgb(77, 78, 80);
   --dark-grey: rgb(36, 37, 39);
   --yellow: rgb(251, 251, 114);
