@@ -113,6 +113,7 @@ body {
   background-color: var(--background);
   margin: 0;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 p {
@@ -725,13 +726,11 @@ footer div img {
   background-color: var(--dark-grey);
 }
 .process-row:nth-child(odd) .process:first-child {
-  border-right: 2px solid var(--secondary);
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   position: relative;
-  left: 1px;
 }
 .process-row:nth-child(even) {
   display: flex;
@@ -739,12 +738,41 @@ footer div img {
   flex-wrap: nowrap;
 }
 .process-row:nth-child(even) .process:first-child {
-  border-left: 2px solid var(--secondary);
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   position: relative;
+}
+.process-count {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  flex-wrap: nowrap;
+  width: 2px;
+  background-color: var(--secondary);
+  position: relative;
+  align-self: stretch;
+}
+.process-count div {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  flex-wrap: nowrap;
+  position: absolute;
+  background-color: var(--dark-grey);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--secondary);
+}
+.process-count div h3 {
+  color: var(--secondary);
+  margin: 0;
+  font-size: 40px;
+  font-weight: 900;
 }
 .process-svg {
   display: flex;

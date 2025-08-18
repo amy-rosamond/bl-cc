@@ -1,6 +1,13 @@
 @use "../../components/animation" as *;
 @use "../../components/mixins" as *;
 
+
+
+
+
+
+// PROCESS
+
 .process {
     &-container {
         @include flexbox($placeContent: center, $placeItems: center);
@@ -30,13 +37,13 @@
 
     &-row:nth-child(odd) {
         .process:first-child {
-            border-right: 2px solid var(--secondary);
+            // border-right: 2px solid var(--secondary);
             border-top-left-radius: 3px;
             border-bottom-left-radius: 3px;
             border-top-right-radius: 0px;
             border-bottom-right-radius: 0px;
             position: relative;
-            left: 1px;
+            // left: 1px;
         }
     }
 
@@ -44,12 +51,38 @@
         @include flexbox($direction: row-reverse);
 
         .process:first-child {
-            border-left: 2px solid var(--secondary);
+            // border-left: 2px solid var(--secondary);
             border-top-left-radius: 0px;
             border-bottom-left-radius: 0px;
             border-top-right-radius: 3px;
             border-bottom-right-radius: 3px;
             position: relative;
+        }
+    }
+
+    &-count {
+        @include flexbox($placeContent: center, $placeItems: center);
+        width: 2px;
+        background-color: var(--secondary);
+        position: relative;
+        align-self: stretch;
+
+        div {
+            @include flexbox($placeContent: center, $placeItems: center);
+            position: absolute;
+            background-color: var(--dark-grey);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            border: 1px solid var(--secondary);
+            // box-shadow: 0 0 0 2px var(--secondary), 0 0 0 7px rgb(255 173 61), 0 0 0 12px rgb(255 200 125);
+
+            h3 {
+                color: var(--secondary);
+                margin: 0;
+                font-size: 40px;
+                font-weight: 900;
+            }
         }
     }
 

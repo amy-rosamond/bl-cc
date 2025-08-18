@@ -1,10 +1,10 @@
 <?php
 
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+// ini_set('display_errors', '1');
+// ini_set('display_startup_errors', '1');
+// error_reporting(E_ALL);
 
-include('includes/services-array.php');
+include('includes/process-array.php');
 include('includes/variables.php');
 include('header.php');
 
@@ -14,19 +14,32 @@ echo '<div class="page-heading">
 </div>';
 ?>
 
-<div class="process-container">
+<!-- <div class="service-container scale-in-hor-center">
+    <div class="service-wrapper">
+
+    </div>
+</div> -->
+
+<div class="process-container scale-in-hor-center">
     <div class="process-wrapper">
         <?php
 
-        foreach ($process as $a) {
-            // echo "even";
+        // count for process count
+        $i = 0;
+        foreach ($process as $count => $b) {
             echo '<div class="process-row">
-                    <div class="process">
-                        <div class="process-svg">' . $a['icon'] . '</div>
+                    <div class="process" data-aos="slide-up" data-aos-duration="500">
+                        <div class="process-svg">' . $b['icon'] . '</div>
                         <div>
-                            <h2>' . $a['title'] . '</h2>
-                            <p>' . $a['info'] . '</p>
+                            <h2>' . $b['title'] . '</h2>
+                            <p>' . $b['info'] . '</p>
                         </div>
+                    </div>
+                    <div class="process-count">
+                        <div data-aos="slide-up" data-aos-duration="500"><h3>';
+            // process number per iteration ( +1 because first iteration is 0 )
+            echo $i + 1;
+            echo '</h3></div>
                     </div>
                     <div class="process">
                         <div>&nbsp;</div>
@@ -36,6 +49,7 @@ echo '<div class="page-heading">
                         </div>
                     </div>
                 </div>';
+            $i++;
         }
 
         ?>
