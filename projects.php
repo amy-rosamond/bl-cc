@@ -1,7 +1,7 @@
 <?php
 
-include('includes/projects-array.php');
 include('includes/variables.php');
+include('includes/projects-array.php');
 include('header.php');
 
 echo '<div class="page-heading">

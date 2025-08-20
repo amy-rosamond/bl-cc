@@ -80,6 +80,7 @@ const lenis = new Lenis({
     wheelMultiplier: 2,
     // allows href clicks while scrolling
     anchors: true
+
 });
 
 // Listen for the scroll event and log the event data

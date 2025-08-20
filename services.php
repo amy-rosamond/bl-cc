@@ -4,8 +4,8 @@
 // ini_set('display_startup_errors', '1');
 // error_reporting(E_ALL);
 
-include('includes/process-array.php');
 include('includes/variables.php');
+include('includes/process-array.php');
 include('header.php');
 
 echo '<div class="page-heading">
@@ -24,8 +24,8 @@ echo '<div class="page-heading">
     <div class="process-wrapper">
         <?php
 
-        // count for process count
-        $i = 0;
+        // count for process count (starting at one so no need for +1)
+        $i = 1;
         foreach ($process as $count => $b) {
             echo '<div class="process-row">
                     <div class="process" data-aos="slide-up" data-aos-duration="500">
@@ -37,8 +37,11 @@ echo '<div class="page-heading">
                     </div>
                     <div class="process-count">
                         <div data-aos="slide-up" data-aos-duration="500"><h3>';
-            // process number per iteration ( +1 because first iteration is 0 )
-            echo $i + 1;
+            // echo $i;
+            // if i is divisible by 2 and equals 0 (even)
+                if ($i % 2 == 0) {
+                    echo $i;
+                }
             echo '</h3></div>
                     </div>
                     <div class="process">
@@ -51,7 +54,6 @@ echo '<div class="page-heading">
                 </div>';
             $i++;
         }
-
         ?>
     </div>
 </div>

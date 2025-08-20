@@ -1,5 +1,8 @@
 <?php
 
+// ini_set('display_errors', '1');
+// ini_set('display_startup_errors', '1');
+// error_reporting(E_ALL);
 
 $navBarProjects = array();
 
@@ -54,7 +57,7 @@ $kitchensInfo = array();
 $kitchensInfo[1] = array(
     'id' => 'kitchens',
     'title' => 'Kitchen Installations',
-    'info' => 'Take a look at BL Carpentry & Construction LTD\'s kitchen work.'
+    'info' => 'Take a look at ' . Blcc::TEL->value . ' kitchen work.'
 );
 
 $kitchens = array();
