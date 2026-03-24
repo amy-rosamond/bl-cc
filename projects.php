@@ -4,15 +4,15 @@ include('includes/variables.php');
 include('includes/projects-array.php');
 include('header.php');
 
-echo '<div class="page-heading">
+echo '<div class="container container-dark" style="margin-top:0px;">
     <h1 id="projects">Projects</h1>
-    <p data-aos="flip-right" data-aos-duration="500">Check out all our hard work here at ' . Blcc::NAME->value . '.</p>
+    <p data-aos="flip-right" data-aos-duration="500">Check out all our hard work here at ' . Company::NAME->value . '.</p>
 </div>';
 
 ?>
 
-<div class="project-nav page-heading-overlap">
-    <nav class="scale-in-hor-center">
+<div class="nav container container container-overlap">
+    <nav class="container-light scale-in-hor-center">
         <?php
 
         foreach ($navBarProjects as $a) {
@@ -25,255 +25,93 @@ echo '<div class="page-heading">
 
 <?php
 
-// echo '<div id="kitchens" class="page-heading container-overlap" style="padding-top: 60px;">
-//     <h2>Kitchens</h2>
-//     <p>Take a look at ' . Blcc::NAME->value . '\'s kitchen work.</p>
-// </div>';
 
-foreach ($kitchensInfo as $b) {
-    echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
+// conversions
+// array
+foreach ($conversionsInfo as $b) {
+    echo '<div id="' . $b['id'] . '" class="container container-dark" style="padding-top: 60px;">
     <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
     <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
 </div>';
 }
 
-echo '<div class="project-card-container container-overlap container-overlap-projects">';
+echo '';
 
-class Project
-{
+?>
+<div class="container container-overlap">
+    <div class="container-light container-img-projects">
+        <div class="project-images">
+            <a class="prev" onclick="plusSlides(-1)">
+                <!-- &#10094; -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+            </a>
 
-    public string $img;
-    public string $title;
-    public string $info;
-    public string $bgtitle;
-    public string $bginfo;
-
-    public function __construct(string $img, string $title, string $info, string $bgtitle, string $bginfo)
-    {
-        $this->img = $img;
-        $this->title = $title;
-        $this->info = $info;
-        $this->bgtitle = $bgtitle;
-        $this->bginfo = $bginfo;
-    }
-
-    private string $html = '';
-
-    private function generateHtml()
-    {
-        $this->html .= '
-        <div class="project-card-wrapper" data-aos="zoom-in-up" data-aos-duration="500">
-            <div class="project-card">
-                <div class="project-card-inner">
-                    <div class="project-card-front">
-                        <img src="' . $this->img . '" alt="' . $this->title . '" >
-                        <div class="project-card-back">
-                        <h3>' . $this->bgtitle . '</h3><p>' . $this->bginfo . '</p>';
-
-        $this->html .= '
-                        </div>
-                    </div>
-                </div>
+            <div class="conversionChingfordImages fade">
+                <!-- <div class="numbertext">1 / 3</div> -->
+                <img src="img/projects/conversion-chingford/house.jpg">
+                <!-- <div class="text">Caption Text</div> -->
             </div>
-            <div class="project-card-info"><h2>' . $this->title . '</h2><p>' . $this->info . '</p></div>
-        </div>';
-    }
 
-    public function displayOutput()
-    {
-        $this->generateHtml();
-        return $this->html;
-    }
-}
-
-
-foreach ($kitchens as $p) {
-    $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
-
-
-    echo $project->displayOutput();
-}
-
-echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
-
-
-// echo '<div id="doors" class="page-heading container-overlap">
-//     <h2>Doors</h2>
-//     <p>Take a look at ' . Blcc::NAME->value . '\'s door work.</p>
-// </div>';
-
-foreach ($doorsInfo as $b) {
-    echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
-    <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
-    <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
-</div>';
-}
-
-echo '<div class="project-card-container container-overlap container-overlap-projects">';
-
-foreach ($doors as $p) {
-    $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
-
-
-    echo $project->displayOutput();
-}
-
-echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
-
-
-// echo '<div id="roofs" class="page-heading container-overlap">
-//     <h2>Roofs</h2>
-//     <p>Take a look at ' . Blcc::NAME->value . '\'s roof work.</p>
-// </div>';
-
-foreach ($roofsInfo as $b) {
-    echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
-    <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
-    <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
-</div>';
-}
-
-echo '<div class="project-card-container container-overlap container-overlap-projects">';
-
-foreach ($roofs as $p) {
-    $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
-
-
-    echo $project->displayOutput();
-}
-
-echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
-
-
-// echo '<div id="joinery" class="page-heading container-overlap">
-//     <h2>Bespoke Joinery</h2>
-//     <p>Take a look at ' . Blcc::NAME->value . '\'s bespoke joinery work.</p>
-// </div>';
-foreach ($joineryInfo as $b) {
-    echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
-    <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
-    <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
-</div>';
-}
-
-echo '<div class="project-card-container container-overlap container-overlap-projects">';
-
-foreach ($joinery as $p) {
-    $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
-
-
-    echo $project->displayOutput();
-}
-
-echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
-
-
-// echo '<div id="framework" class="page-heading container-overlap">
-//     <h2>Stud-work</h2>
-//     <p>Take a look at ' . Blcc::NAME->value . '\'s Stud-work.</p>
-// </div>';
-foreach ($frameworkInfo as $b) {
-    echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
-    <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
-    <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
-</div>';
-}
-
-echo '<div class="project-card-container container-overlap container-overlap-projects">';
-
-foreach ($framework as $p) {
-    $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
-
-
-    echo $project->displayOutput();
-}
-
-echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
-
-
-foreach ($secondFixInfo as $b) {
-    echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
-    <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
-    <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
-</div>';
-}
-
-echo '<div class="project-card-container container-overlap container-overlap-projects">';
-
-foreach ($secondFix as $p) {
-    $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
-
-
-    echo $project->displayOutput();
-}
-
-echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
-
-
-foreach ($flooringInfo as $b) {
-    echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
-    <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
-    <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
-</div>';
-}
-
-echo '<div class="project-card-container container-overlap container-overlap-projects">';
-
-foreach ($flooring as $p) {
-    $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
-
-
-    echo $project->displayOutput();
-}
-
-echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
-
-
-foreach ($constructionInfo as $b) {
-    echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
-    <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
-    <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
-</div>';
-}
-
-echo '<div class="project-card-container container-overlap container-overlap-projects">';
-
-foreach ($construction as $p) {
-    $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
-
-
-    echo $project->displayOutput();
-}
-
-echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
-
-
-// foreach ($firstFixInfo as $b) {
-//     echo '<div id="' . $b['id'] . '" class="page-heading container-overlap" style="padding-top: 60px;">
-//     <h2 data-aos="flip-right" data-aos-duration="500">' . $b['title'] . '</h2>
-//     <p data-aos="flip-right" data-aos-duration="500">' . $b['info'] . '</p>
-// </div>';
-// }
-
-// echo '<div class="project-card-container container-overlap container-overlap-projects">';
-
-// foreach ($firstFix as $p) {
-//     $project = new Project($p['img'], $p['title'], $p['info'], $p['bgtitle'], $p['bginfo']);
-
-
-//     echo $project->displayOutput();
-// }
-
-// echo '</div><div class="project-back-to-top"><a href="#projects" class="a-button">Back to top</a></div>';
-
+            <div class="conversionChingfordImages fade">
+                <!-- <div class="numbertext">2 / 3</div> -->
+                <img src="img/projects/conversion-chingford/bathroom-sink.jpg">
+                <!-- <div class="text">Caption Two</div> -->
+            </div>
+
+            <div class="conversionChingfordImages fade">
+                <!-- <div class="numbertext">2 / 3</div> -->
+                <img src="img/projects/conversion-chingford/garden.jpg">
+                <!-- <div class="text">Caption Two</div> -->
+            </div>
+
+            <div class="conversionChingfordImages fade">
+                <!-- <div class="numbertext">2 / 3</div> -->
+                <img src="img/projects/conversion-chingford/kitchen-white.jpg">
+                <!-- <div class="text">Caption Two</div> -->
+            </div>
+
+            <div class="conversionChingfordImages fade">
+                <!-- <div class="numbertext">2 / 3</div> -->
+                <img src="img/projects/conversion-chingford/scaffolding.jpg">
+                <!-- <div class="text">Caption Two</div> -->
+            </div>
+
+            <div class="conversionChingfordImages fade">
+                <!-- <div class="numbertext">2 / 3</div> -->
+                <img src="img/projects/conversion-chingford/stairs.jpg">
+                <!-- <div class="text">Caption Two</div> -->
+            </div>
+
+            <a class="next" onclick="plusSlides(1)">
+                <!-- &#10095; -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+            </a>
+        </div>
+
+        <div style="text-align:center;margin: 20px 0px 0px;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+</div>
+
+<?php
 
 
 
 include('footer.php');
 
 ?>
-
 <script src="script/script.js?r=123"></script>
+<script src="script/slideShow.js?r=123"></script>
 
 <script>
     window.addEventListener('load', function() {

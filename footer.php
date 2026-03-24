@@ -58,6 +58,6 @@
     </nav>
 
 
-    <div><img src="img/logos/bl-logo-footer.png" alt="<?= Blcc::NAME->value; ?>"></div>
+    <div><img src="img/logos/bl-logo-footer.png" alt="<?= Company::NAME->value; ?>"></div>
 
 </footer>

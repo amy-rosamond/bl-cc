@@ -24,7 +24,8 @@
 
     &-bottom {
         background-color: var(--dark-grey);
-        bottom: 45px;
+        // bottom: 45px;
+        margin-top: -25px;
         z-index: 1;
     }
 

@@ -5,7 +5,7 @@ include('header.php');
 
 echo '<div class="page-heading">
     <h1>Reviews</h1>
-    <p data-aos="flip-right" data-aos-duration="500">Read all of ' . Blcc::NAME->value . '\'s great reviews.</p>
+    <p data-aos="flip-right" data-aos-duration="500">Read all of ' . Company::NAME->value . '\'s great reviews.</p>
 </div>';
 
 include('footer.php');

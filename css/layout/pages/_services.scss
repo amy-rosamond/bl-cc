@@ -1,7 +1,12 @@
 @use "../../components/animation" as *;
 @use "../../components/mixins" as *;
 
-
+.service {
+    &-back-to-top {
+        @include flexbox($placeContent: center, $placeItems: center);
+        margin: 20px 0px 40px;
+    }
+}
 
 
 

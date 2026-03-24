@@ -1,0 +1,82 @@
+@use "../../components/animation" as *;
+@use "../../components/mixins" as *;
+
+.service {
+    &-card {
+        &-wrapper {
+            @include flexbox($wrap: wrap, $justifyContent: space-evenly);
+        }
+
+        background-color: var(--grey);
+        max-width: 360px;
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 10px;
+        // border: 2px double var(--black);
+
+        h2 {
+            margin-top: 30px;
+            color: var(--secondary);
+        }
+
+        &-img {
+            position: relative;
+            display: inline-block;
+
+            &-info {
+                @include flexbox($placeContent: center, $placeItems: center, $direction: column);
+                visibility: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: var(--secondary);
+                font-weight: 400;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: 0% 100%;
+                transition: all .3s ease-in-out;
+
+                h3,
+                p {
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-image: linear-gradient(var(--secondary), var(--secondary));
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 100%;
+                    transition: all .3s ease-in-out;
+                }
+            }
+
+            &:hover {
+                .service-card-img-info {
+                    visibility: visible;
+                    color: var(--secondary) !important;
+                    background-size: 100% 100%;
+                    transition: all .3s ease-in-out;
+
+                    h3,
+                    p {
+                        background-size: 100% 100%;
+                        transition: all .3s ease-in-out;
+                    }
+                }
+            }
+
+            img {
+                display: block;
+                // max-width: 400px;
+                width: 100%;
+                border-radius: 5px;
+                border: 2px solid var(--black);
+            }
+        }
+    }
+}

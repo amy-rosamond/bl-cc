@@ -1,4 +1,5 @@
 @use "../css/components/animista";
+@use "../css/components/nav";
 
 @use "../css/general/modals";
 @use "../css/general/tags";
@@ -8,8 +9,10 @@
 @use "../css/layout/header";
 @use "../css/layout/footer";
 
+@use "../css/layout/pages/about";
 @use "../css/layout/pages/contact";
 @use "../css/layout/pages/projects";
+@use "../css/layout/pages/services_cards";
 @use "../css/layout/pages/services";
 
 :root {

@@ -4,7 +4,7 @@ include('includes/variables.php');
 include('header.php');
 
 echo '<div class="page-heading">
-    <h1>Welcome to ' . Blcc::NAME->value . '.</h1>
+    <h1>Welcome to ' . Company::NAME->value . '.</h1>
     <p data-aos="flip-right" data-aos-duration="500">For all your Carpentry & Construction needs.</p>
 </div>';
 

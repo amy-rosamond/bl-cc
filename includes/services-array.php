@@ -1,12 +1,143 @@
 <?php
 
-$service = array();
+// ini_set('display_errors', '1');
+// ini_set('display_startup_errors', '1');
+// error_reporting(E_ALL);
 
+$navBarServices = array();
 
-$service[1] = array(
-    "icon" => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
-    </svg>',
-    "title" => 'Get in Touch',
-    "info" => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+$navBarServices[1] = array(
+    "href" => '#kitchens',
+    "name" => 'Kitchens'
 );
+
+$navBarServices[2] = array(
+    "href" => '#doors',
+    "name" => 'Doors'
+);
+
+$navBarServices[3] = array(
+    "href" => '#roofs',
+    "name" => 'Roofs'
+);
+
+$navBarServices[4] = array(
+    "href" => '#joinery',
+    "name" => 'Bespoke Joinery'
+);
+
+$navBarServices[5] = array(
+    "href" => '#framework',
+    "name" => 'Frame-work'
+);
+
+$navBarServices[6] = array(
+    "href" => '#secondFix',
+    "name" => 'Second Fix Carpentry'
+);
+
+$navBarServices[7] = array(
+    "href" => '#flooring',
+    "name" => 'Flooring'
+);
+
+$navBarServices[8] = array(
+    "href" => '#construction',
+    "name" => 'Construction'
+);
+
+// $navBarServices[9] = array(
+//     "href" => '#firstFix',
+//     "name" => 'First Fix Carpentry'
+// );
+
+
+$kitchensInfo = array();
+
+$kitchensInfo[1] = array(
+    'id' => 'kitchens',
+    'title' => 'Kitchen Installations',
+    'info' => 'Take a look at ' . Company::NAME->value . ' kitchen work.'
+);
+
+
+$doorsInfo = array();
+
+$doorsInfo[1] = array(
+    'id' => 'doors',
+    'title' => 'Door Installations',
+    'info' => 'Take a look at BL Carpentry & Construction LTD\'s door work.'
+);
+
+
+
+$roofsInfo = array();
+
+$roofsInfo[1] = array(
+    'id' => 'roofs',
+    'title' => 'Roof Installations',
+    'info' => 'Take a look at BL Carpentry & Construction LTD\'s roof work.'
+);
+
+
+
+$joineryInfo = array();
+
+$joineryInfo[1] = array(
+    'id' => 'joinery',
+    'title' => 'Bespoke Joinery',
+    'info' => 'Take a look at BL Carpentry & Construction LTD\'s bespoke joinery work.'
+);
+
+
+
+$frameworkInfo = array();
+
+$frameworkInfo[1] = array(
+    'id' => 'framework',
+    'title' => 'Frame-work',
+    'info' => 'Take a look at BL Carpentry & Construction LTD\'s Frame-work.'
+);
+
+
+
+$secondFixInfo = array();
+
+$secondFixInfo[1] = array(
+    'id' => 'secondFix',
+    'title' => 'Second Fix Carpentry',
+    'info' => 'Take a look at BL Carpentry & Construction LTD\'s Second Fix Carpentry. This includes Skirting, Architraves, etc...'
+);
+
+
+
+$flooringInfo = array();
+
+$flooringInfo[1] = array(
+    'id' => 'flooring',
+    'title' => 'Flooring Installations',
+    'info' => 'Take a look at BL Carpentry & Construction LTD\'s Flooring.'
+);
+
+
+
+$constructionInfo = array();
+
+$constructionInfo[1] = array(
+    'id' => 'construction',
+    'title' => 'Construction',
+    'info' => 'Take a look at BL Carpentry & Construction LTD\'s construction services.'
+);
+
+
+
+// $firstFixInfo = array();
+
+// $firstFixInfo[1] = array(
+//     'id' => 'firstFix',
+//     'title' => 'First Fix Carpentry',
+//     'info' => 'Take a look at BL Carpentry & Construction LTD\'s First Fix Carpentry. This includes Frame work, etc...'
+// );
+
+
+?>
