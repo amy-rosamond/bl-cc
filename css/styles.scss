@@ -16,25 +16,39 @@
 @use "../css/layout/pages/services";
 
 :root {
-    --background: rgb(54, 55, 57);
+        --background: #fff;
     --background-img: url(../img/bg/wood-bg.jpg);
-    --primary: rgb(54, 55, 57);
-    // #ff9300
-    --secondary: rgb(255, 147, 0);
-    // #0094AC
-    // --secondary: rgb(0, 148, 172);
+    --primary: #fff;
+    --secondary: #1b2355;
     --white: #fff;
     --black: #191919;
-    --grey: rgb(77, 78, 80);
-    --dark-grey: rgb(36, 37, 39);
-
-    // before logo change
-    
-    // --background: rgb(57, 58, 60);
-    // --primary: rgb(57, 58, 60);
-    // --dark-grey: rgb(41, 42, 44);
-
+    --grey: #ffffff;
+    --dark-grey: #f6f6f6;
     --yellow: rgb(251, 251, 114);
     --light-yellow: rgb(244, 244, 158);
+    // --background: #fff;
+    // --background-img: url(../img/bg/wood-bg.jpg);
+    // --primary: #fff;
+    // --secondary: #343a57;
+    // --white: #fff;
+    // --black: #191919;
+    // --grey: #f2f2f2;
+    // --dark-grey: #ccc;
+
+    // --yellow: rgb(251, 251, 114);
+    // --light-yellow: rgb(244, 244, 158);
     --fontfamily-BIZ: 'BIZ UDPMincho', serif;
+
+    // --background: rgb(54, 55, 57);
+    // --background-img: url(../img/bg/wood-bg.jpg);
+    // --primary: rgb(54, 55, 57);
+    // --secondary: rgb(255, 147, 0);
+    // --white: #fff;
+    // --black: #191919;
+    // --grey: rgb(77, 78, 80);
+    // --dark-grey: rgb(36, 37, 39);
+
+    // --yellow: rgb(251, 251, 114);
+    // --light-yellow: rgb(244, 244, 158);
+    // --fontfamily-BIZ: 'BIZ UDPMincho', serif;
 }

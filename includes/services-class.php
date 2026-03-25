@@ -27,7 +27,7 @@ class service
     private function generateHtml()
     {
         $this->html .= '
-        <div class="service-card">
+        <div class="service-card" data-aos="slide-up" data-aos-duration="500">
             <div class="service-card-img">
                 <img src="' . $this->img . '" alt="' . $this->title . '">
                 <div class="service-card-img-info">

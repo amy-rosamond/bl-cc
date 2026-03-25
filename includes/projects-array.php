@@ -7,13 +7,13 @@
 $navBarProjects = array();
 
 $navBarProjects[1] = array(
-    "href" => '#kitchens',
-    "name" => 'Conversion, Chingford'
+    "href" => '#doors',
+    "name" => 'Refurbishment, Chorleywood'
 );
 
 $navBarProjects[2] = array(
-    "href" => '#doors',
-    "name" => 'Refurbishment, Chorleywood'
+    "href" => '#kitchens',
+    "name" => 'Conversion, Chingford'
 );
 
 $navBarProjects[3] = array(
@@ -31,4 +31,10 @@ $conversionsInfo[1] = array(
 );
 
 
-?>
+$refurbInfo = array();
+
+$refurbInfo[1] = array(
+    'id' => 'refurb',
+    'title' => 'Refurbishment, Chorleywood',
+    'info' => 'Located in the charming town of Chorleywood, this bungalow has undergone a remarkable transformation through a high-end refurbishment, epitomizing elegance and modernity. The property’s stunning makeover includes a spacious rear extension, seamlessly blending contemporary design with timeless aesthetics. This expansive addition incorporates a beautifully crafted living space, flooded with natural light, creating an inviting atmosphere. The centrepiece of the extension is a meticulously designed high-spec kitchen, boasting top-of-the-line appliances, sleek countertops, and ample storage. Every detail has been carefully considered, resulting in a truly exceptional living space that effortlessly combines style and functionality.'
+);
