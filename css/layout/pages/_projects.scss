@@ -47,7 +47,7 @@
         .projects-info {
             @include flexbox($placeItems: center, $direction: column);
             border-radius: 5px;
-            background-color: var(--grey);
+            background-color: var(--white);
             max-width: 300px;
             width: 100%;
             padding: 20px 10px;

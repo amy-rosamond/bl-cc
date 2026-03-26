@@ -11,7 +11,7 @@
             @include flexbox($justifyContent: center, $alignItems: center, $direction: column);
             max-width: 480px;
             width: 100%;
-            background-color: var(--grey);
+            background-color: var(--white);
             padding: 20px;
             border-radius: 5px;
             margin: 10px 20px;

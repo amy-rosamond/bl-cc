@@ -9,11 +9,11 @@
         // set with new container classes
         // max-width: 1100px;
         // width: 100%;
-        // background-color: var(--grey);
+        // background-color: var(--white);
         // margin: 20px;
         border-radius: 5px;
         padding: 10px;
-        border: 2px double var(--secondary);
+        border: 1px double var(--secondary);
 
         a {
             @include flexbox($placeContent: center, $placeItems: center);
@@ -30,7 +30,7 @@
             text-align: center;
             border: 1px solid var(--dark-grey);
             background-color: var(--dark-grey);
-            background-image: linear-gradient(var(--grey), var(--grey));
+            background-image: linear-gradient(var(--white), var(--white));
             background-position: 100% 0%;
             background-repeat: no-repeat;
             background-size: 100% 100%;

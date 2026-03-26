@@ -66,7 +66,7 @@
   flex-wrap: wrap;
   border-radius: 5px;
   padding: 10px;
-  border: 2px double var(--secondary);
+  border: 1px double var(--secondary);
 }
 .nav nav a {
   display: flex;
@@ -86,7 +86,7 @@
   text-align: center;
   border: 1px solid var(--dark-grey);
   background-color: var(--dark-grey);
-  background-image: linear-gradient(var(--grey), var(--grey));
+  background-image: linear-gradient(var(--white), var(--white));
   background-position: 100% 0%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -119,7 +119,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  background-color: var(--grey);
+  background-color: var(--white);
   margin: 20px auto;
   border-radius: 5px;
   padding: 20px;
@@ -299,7 +299,7 @@ html.lenis body {
   margin-top: -40px;
 }
 .container-light {
-  background-color: var(--grey);
+  background-color: var(--white);
   max-width: 1100px;
   width: 100%;
   z-index: 10;
@@ -364,7 +364,7 @@ header nav a {
   background-image: linear-gradient(var(--secondary), var(--secondary));
   background-position: 50% 100%;
   background-repeat: no-repeat;
-  background-size: 100% 3%;
+  background-size: 100% 2%;
   color: var(--black);
 }
 header nav a:hover {
@@ -539,7 +539,7 @@ footer div img {
   flex-wrap: nowrap;
   max-width: 550px;
   width: 100%;
-  background-color: var(--grey);
+  background-color: var(--white);
   border-radius: 5px;
   margin: 10px;
   padding: 35px 20px;
@@ -649,7 +649,7 @@ footer div img {
   place-items: center;
   flex-wrap: nowrap;
   border-radius: 5px;
-  background-color: var(--grey);
+  background-color: var(--white);
   max-width: 300px;
   width: 100%;
   padding: 20px 10px;
@@ -685,7 +685,7 @@ footer div img {
   flex-wrap: wrap;
 }
 .service-card {
-  background-color: var(--grey);
+  background-color: var(--white);
   max-width: 360px;
   width: 100%;
   padding: 15px;
@@ -871,12 +871,10 @@ footer div img {
   --background: #fff;
   --background-img: url(../img/bg/wood-bg.jpg);
   --primary: #fff;
-  --secondary: #1b2355;
+  --secondary: #303f9c;
   --white: #fff;
   --black: #191919;
-  --grey: #ffffff;
+  --grey: #f2f2f2;
   --dark-grey: #f6f6f6;
-  --yellow: rgb(251, 251, 114);
-  --light-yellow: rgb(244, 244, 158);
   --fontfamily-BIZ: 'BIZ UDPMincho', serif;
 }/*# sourceMappingURL=styles.css.map */

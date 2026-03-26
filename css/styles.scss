@@ -16,16 +16,21 @@
 @use "../css/layout/pages/services";
 
 :root {
-        --background: #fff;
+    --background: #fff;
     --background-img: url(../img/bg/wood-bg.jpg);
     --primary: #fff;
-    --secondary: #1b2355;
+    // --secondary: #1b2355;
+    --secondary: #303f9c;
     --white: #fff;
     --black: #191919;
-    --grey: #ffffff;
+    --grey: #f2f2f2;
     --dark-grey: #f6f6f6;
-    --yellow: rgb(251, 251, 114);
-    --light-yellow: rgb(244, 244, 158);
+    --fontfamily-BIZ: 'BIZ UDPMincho', serif;
+
+
+    // --yellow: rgb(251, 251, 114);
+    // --light-yellow: rgb(244, 244, 158);
+
     // --background: #fff;
     // --background-img: url(../img/bg/wood-bg.jpg);
     // --primary: #fff;
@@ -37,7 +42,6 @@
 
     // --yellow: rgb(251, 251, 114);
     // --light-yellow: rgb(244, 244, 158);
-    --fontfamily-BIZ: 'BIZ UDPMincho', serif;
 
     // --background: rgb(54, 55, 57);
     // --background-img: url(../img/bg/wood-bg.jpg);

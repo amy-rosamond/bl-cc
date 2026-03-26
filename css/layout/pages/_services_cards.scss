@@ -7,7 +7,7 @@
             @include flexbox($wrap: wrap, $justifyContent: space-evenly);
         }
 
-        background-color: var(--grey);
+        background-color: var(--white);
         max-width: 360px;
         width: 100%;
         padding: 15px;
